@@ -23,8 +23,8 @@ def post_file():
         aws_name = s3m.aws_upload("audio.wav")
         link = s3m.aws_get_file_url(aws_name)
         base_data_list = {'Branch_code': 12345566,
-                          'Branch': "karanchi",
-                          'CNIC': 0000000000000, #6111111111112,
+                          'Branch': "karachi",
+                          'CNIC': 6111111111112,
                           'Audio_file_link': link,
                           'title':str(datetime.now()),
                           'Date': str(datetime.date(datetime.now())),
@@ -58,4 +58,4 @@ def set_delta():
     return cfg.var_delta
 
 
-app.run()
+app.run(host='0.0.0.0', port='8090')
