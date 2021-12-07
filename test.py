@@ -13,7 +13,7 @@ import mongo_management
 
 # r = requests.get("http://127.0.0.1:5000/api/get/all")
 # print(r.te)
-# print(str(datetime.time(datetime.now())))
+print(str(datetime.time(datetime.now())))
 # print(str(datetime.date(datetime.now())))
 # print(round(os.path.getsize("audio.wav")/1024))
 list_city=["islamabad","dubai","peshawar","karachi"]
