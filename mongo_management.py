@@ -20,3 +20,9 @@ def get_all_data():
         list.append(x)
     client.close()
     return list
+
+# def get_latest_entry():
+#     client = pymongo.MongoClient(cfg.mongo_link)
+#     db = client[cfg.db_name]
+#     mycol = db[cfg.col_name]
+#     return [mycol.find().sort({"_id":-1}).limit(1)]
