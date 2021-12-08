@@ -22,6 +22,8 @@ def get_all_data():
     return list
 
 # def get_latest_entry():
+#     get last entry from our returned mongo objects list
+
 #     client = pymongo.MongoClient(cfg.mongo_link)
 #     db = client[cfg.db_name]
 #     mycol = db[cfg.col_name]

@@ -21,12 +21,14 @@ def aws_upload(local_filename):
 
 
 def aws_get_file_url(local_filename):
+
     s3 = boto3.client('s3', aws_access_key_id=cfg.aws_access_key, aws_secret_access_key= cfg.aws_secret_key,
                      config=Config(signature_version=cfg.signature_version), region_name=cfg.region_name)
 
     # Generate the URL to get 'key-name' from 'bucket-name'
     url = s3.generate_presigned_url(
         ClientMethod='get_object',
+        ExpiresIn=604800,
         Params={
             'Bucket': cfg.aws_bucket,
             'Key':  local_filename
